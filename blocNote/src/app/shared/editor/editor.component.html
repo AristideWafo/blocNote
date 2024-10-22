@@ -1,0 +1,14 @@
+
+<div class="body">
+    @for (input of inputs; track $index) {
+        <app-input [type]="input.type"></app-input>
+    }  
+    @if (displayPossibiilty) {
+        <div class="possibility">
+            @for (mdButton of mdButtons; track $index) {
+                <input type="button" value="{{mdButton.value}}" (click)="addInput(mdButton.type)"  >
+            }
+        </div>
+    }
+    <input type="button" value="add" (click)="displayPossibiilty=!displayPossibiilty">
+</div>

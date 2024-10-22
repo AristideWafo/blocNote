@@ -1,0 +1,42 @@
+# Compiled output
+/blocNote/dist
+/blocNote/tmp
+/blocNote/out-tsc
+
+# Dependencies
+/blocNote/node_modules
+/blocNote/package-lock.json
+/blocNote/yarn.lock
+
+# IDE files
+/blocNote/.idea
+/blocNote/.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Angular build artifacts
+/blocNote/.angular/cache
+/blocNote/.angular
+
+# Logs and debugging
+/blocNote/npm-debug.log*
+/blocNote/yarn-debug.log*
+/blocNote/yarn-error.log*
+
+# Optional npm cache directory
+/blocNote/.npm
+
+# Optional eslint cache
+/blocNote/.eslintcache
+
+# Compiled TypeScript files
+/blocNote/*.tsbuildinfo
+
+# Environment variables
+/blocNote/src/environments/*.ts
+
+# Miscellaneous
+/blocNote/.DS_Store
+/blocNote/Thumbs.db

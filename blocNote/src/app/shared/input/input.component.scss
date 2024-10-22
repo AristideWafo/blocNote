@@ -1,0 +1,31 @@
+div, input, textarea, markdown{
+    display: flex;
+    align-items: center;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    height: fit-content;
+}
+textarea{
+    min-height: 40px;
+    height: fit-content;
+}
+
+.display{
+    width: 100%;
+    min-height: 40px;
+    height: fit-content;
+    cursor: pointer;
+    text-overflow: clip;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word; /* Coupe les mots trop longs pour éviter le débordement */
+    overflow-wrap: break-word; /* Support pour les anciens navigateurs */
+}
+.display *{
+    width: 100%;
+}
+div:first-child{
+    padding: 0;
+}
