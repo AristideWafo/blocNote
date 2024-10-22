@@ -13,9 +13,9 @@ export class InputComponent implements OnInit {
 
   @Input() type: string = 'p'; // Type de l'input
   isEditing!: boolean; // Gère l'état d'édition
-  editableText: string = '...'; // Texte à éditer
+  editableText: string = ''; // Texte à éditer
   language: string = 'typescript'; // Langage de programmation
-  test: string = '...'; // Texte à é
+  test: string = ''; // Texte à é
   parsedContent: any = '';
   keyPressSubscription!: Subscription ; 
   creation:boolean = true;
@@ -69,10 +69,6 @@ export class InputComponent implements OnInit {
       return `### ${this.editableText}`;
     } else if(this.type == 'H4'){
       return `#### ${this.editableText}`;
-    } else if(this.type == 'H5'){
-      return `##### ${this.editableText}`;
-    } else if(this.type == 'H6'){
-      return `###### ${this.editableText}`;
     } else if(this.type == 'code'){
       this.detectLanguage()
       return `\`\`\` ${this.language} \n${this.editableText}`;

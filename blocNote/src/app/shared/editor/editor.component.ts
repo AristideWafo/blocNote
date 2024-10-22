@@ -20,8 +20,6 @@ export class EditorComponent implements AfterContentChecked {
     {type: 'H2', value: 'Titre 2'},
     {type: 'H3', value: 'Titre 3'},
     {type: 'H4', value: 'Titre 4'},
-    {type: 'H5', value: 'Titre 5'},
-    {type: 'H6', value: 'Titre 6'},
     {type: 'code', value: 'Code'},
     {type: 'math', value: 'Mathématiques'},
     {type: 'mermaid', value: 'DMermaid'},

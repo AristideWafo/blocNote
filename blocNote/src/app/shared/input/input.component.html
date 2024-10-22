@@ -5,7 +5,8 @@
     {{parsedContent}}
 </div>
 
-<textarea placeholder="/ Enter something" *ngIf="isEditing" [value]="editableText" (blur)="saveChanges($event)" (keydown.enter)="saveChanges($event)" autofocus></textarea>
+<textarea placeholder="/Enter something" rows="2" *ngIf="isEditing" [value]="editableText" (blur)="saveChanges($event)" (keydown.enter)="saveChanges($event)" autofocus></textarea>
+
 
 
   
