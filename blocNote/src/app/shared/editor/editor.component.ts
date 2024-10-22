@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component,} from '@angular/core';
+import { AfterContentChecked, Component, input,} from '@angular/core';
 import { KeyPressService } from '../../../services/key-press.service';
 
 @Component({
@@ -44,5 +44,6 @@ export class EditorComponent implements AfterContentChecked {
   }
   onModifyOption(selected:any){
     this.inputs[this.inputToModify] = {type: selected.type, value:  selected.type};
+    this.inputToModify = -1;
   }
 }
