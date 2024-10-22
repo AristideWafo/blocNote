@@ -7,6 +7,7 @@ import { KeyPressService } from '../../../services/key-press.service';
   styleUrl: './editor.component.scss'
 })
 export class EditorComponent implements AfterContentChecked {
+  inputToModify!: number ;
   constructor(private keyPressService:KeyPressService) { }
   ngAfterContentChecked(): void {
   //   this.keyPressService.closeInput(0);
@@ -34,8 +35,14 @@ export class EditorComponent implements AfterContentChecked {
       
       this.keyPressService.closeInput(0);
   }
-  // diffuse(){
-  //   this.enterPress = true;
-  //   console.log(this.enterPress=!this.enterPress)
-  // }
+  modifyOption(index:number){
+    this.inputToModify = index;
+  }
+  onSelectOption(selected:any){
+    console.log(selected);
+    this.addInput(selected.type);
+  }
+  onModifyOption(selected:any){
+    this.inputs[this.inputToModify] = {type: selected.type, value:  selected.type};
+  }
 }

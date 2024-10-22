@@ -1,14 +1,16 @@
 
 <div class="body">
     @for (input of inputs; track $index) {
+        <button (click)="modifyOption($index)">modify</button>    
         <app-input [type]="input.type"></app-input>
+        @if ($index == inputToModify) {
+            <ng-container>
+                <app-list-menu (pressedChoice)="onModifyOption($event)"></app-list-menu>
+            </ng-container>
+        }
     }  
     @if (displayPossibiilty) {
-        <div class="possibility">
-            @for (mdButton of mdButtons; track $index) {
-                <input type="button" value="{{mdButton.value}}" (click)="addInput(mdButton.type)"  >
-            }
-        </div>
+        <app-list-menu (pressedChoice)="onSelectOption($event)" ></app-list-menu>
     }
     <input type="button" value="add" (click)="displayPossibiilty=!displayPossibiilty">
 </div>

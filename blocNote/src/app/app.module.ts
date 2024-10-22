@@ -9,12 +9,14 @@ import mermaid from 'mermaid';
 import { EditorComponent } from './shared/editor/editor.component';
 import { InputComponent } from './shared/input/input.component';
 import { marked } from 'marked';
+import { ListMenuComponent } from './shared/list-menu/list-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditorComponent,
-    InputComponent
+    InputComponent,
+    ListMenuComponent
   ],
   imports: [
     BrowserModule,

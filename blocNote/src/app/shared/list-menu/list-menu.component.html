@@ -1,0 +1,5 @@
+<div class="possibility">
+    @for (mdButton of mdButtons; track $index) {
+        <input type="button" value="{{mdButton.value}}" (click)="sendPress(mdButton)"  >
+    }
+</div>
