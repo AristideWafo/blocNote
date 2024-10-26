@@ -1,7 +1,7 @@
 
 <div class="body">
     @for (input of inputs; track $index) {
-        <button (click)="modifyOption($index)">modify</button>    
+        <button (click)="modifyOption($index);" for="input">modify</button>    
         <app-input [type]="input.type"></app-input>
         @if ($index == inputToModify) {
             <ng-container>

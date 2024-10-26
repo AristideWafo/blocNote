@@ -1,12 +1,14 @@
 <!-- <div> -->
     <!-- Si on n'est pas en mode édition, afficher la div -->
     <!-- <div markdown [innerHTML]="parsedContent" *ngIf="!isEditing" (click)="enableEditing()" class="display"> -->
-<div [innerHTML]="parse()" *ngIf="!isEditing" (click)="enableEditing()"  class="display" >
+<div [innerHTML]="parse()" *ngIf="!isEditing" name="input" (click)="enableEditing()" class="display" >
     {{parsedContent}}
 </div>
-
-<textarea placeholder="/Enter something" rows="2" *ngIf="isEditing" [value]="editableText" (blur)="saveChanges($event)" (keydown.enter)="saveChanges($event)" autofocus></textarea>
-
-
-
-  
+<textarea #textarea 
+placeholder="/Enter something" 
+*ngIf="isEditing" 
+[(ngModel)]="editableText" 
+(blur)="closeInsertBlur($event)" 
+(keydown.enter)="closeInsertEnter($event)" 
+(mouseup)="getSelectedText($event)"
+autofocus></textarea>

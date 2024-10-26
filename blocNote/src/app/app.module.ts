@@ -10,6 +10,7 @@ import { EditorComponent } from './shared/editor/editor.component';
 import { InputComponent } from './shared/input/input.component';
 import { marked } from 'marked';
 import { ListMenuComponent } from './shared/list-menu/list-menu.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ListMenuComponent } from './shared/list-menu/list-menu.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     // MarkdownModule.forRoot({
     //   loader: HttpClientModule, // if using HTTP to load markdown files
     //   sanitize: SecurityContext.NONE // to allow HTML in markdown
